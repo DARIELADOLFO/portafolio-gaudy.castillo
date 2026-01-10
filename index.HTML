@@ -56,7 +56,7 @@
             width: 100%;
             top: 0;
             background: rgba(255, 255, 255, 0.95);
-            padding: 20px 50px;
+            padding: 15px 50px; /* Reduje un poco el padding vertical para ajustar el doble texto */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -64,16 +64,36 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
+        /* --- ESTILOS DEL LOGO MODIFICADOS --- */
         .logo {
-            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column; /* Pone el texto uno debajo del otro */
+            justify-content: center;
+            line-height: 1.2; /* Junta las líneas */
+            cursor: pointer;
+        }
+
+        .logo-nombre {
+            font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
+            color: var(--primary-color);
+        }
+
+        .logo-titulo {
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 3px; /* Letras separadas estilo elegante */
+            text-transform: uppercase;
+            color: var(--accent-color); /* Color dorado/naranja */
+            margin-top: -2px;
         }
 
         nav ul {
             display: flex;
             list-style: none;
+            align-items: center; /* Centrar verticalmente con el logo nuevo */
         }
 
         nav ul li {
@@ -570,9 +590,12 @@
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header CON CAMBIO DE LOGO -->
     <header>
-        <div class="logo">Gaudy Nicole Castillo</div>
+        <div class="logo">
+            <span class="logo-nombre">Gaudy Nicole Castillo</span>
+            <span class="logo-titulo">Arquitecta</span>
+        </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -731,14 +754,14 @@
           <div class="portfolio-item" data-aos="zoom-in" data-aos-delay="100">
             <div class="portfolio-image">
                <!-- ⚠️ CAMBIAR IMAGEN PRINCIPAL PLANO COMERCIAL AQUÍ -->
-              <img src="Imagenes/plano_comercial_principal.jpg" alt="Plano Comercial" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'">
+              <img src="Imagenes/cocina2.jpg" alt="Plano Comercial" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80'">
               <div class="portfolio-overlay">
                 <p>Detalles constructivos para local comercial</p>
               </div>
             </div>
             <div class="portfolio-content">
-              <h3>Plano Comercial</h3>
-              <p>Zonificación y flujo de usuarios</p>
+              <h3>Cocina Contemporánea</h3>
+              <p>Proyecto de cocina con estilo contemporáneo</p>
               <button class="btn" onclick="openModal('modal5')">Ver Detalles</button>
             </div>
           </div>
@@ -919,27 +942,27 @@
           <div class="modal-grid">
             <div class="modal-info">
               <h4>Descripción Técnica</h4>
-              <p>Zonificación para plaza comercial pequeña con 5 locales y áreas comunes.</p>
+              <p>Cocina de estilo contemporáneo. Destaca una isla central con cubierta de piedra en tono gris claro, que funciona como área de trabajo y barra, acompañada por cinco taburetes altos con asientos de cuero marrón y estructura de madera, aportando calidez al conjunto.</p>
             </div>
             <div class="modal-info">
               <h4>Softwares o herramientas usadas</h4>
-              <p>AutoCAD / SketchUp Layout.</p>
+              <p>AutoCAD / SketchUp / RM .</p>
             </div>
              <div class="modal-info">
               <h4>Detalles</h4>
-              <p>Distribución de flujos, salidas de emergencia y áreas de servicio.</p>
+              <p>Este diseño ofrece alta funcionalidad, ya que la isla central mejora la circulación, amplía la superficie de trabajo y permite integrar áreas de preparación, cocción y convivencia en un solo ambiente.</p>
             </div>
           </div>
           <div class="modal-images">
             <div class="modal-image">
                <!-- ⚠️ CAMBIAR IMAGEN 1 PLANO COMERCIAL AQUÍ -->
-              <img src="Imagenes/plano_comercial_1.jpg" alt="Plano Comercial" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
-               <div class="modal-image-label">Planta de Conjunto</div>
+              <img src="Imagenes/cocina1.png" alt="Plano Comercial" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+               <div class="modal-image-label">Planos cocina</div>
             </div>
              <div class="modal-image">
                <!-- ⚠️ CAMBIAR IMAGEN 2 PLANO COMERCIAL AQUÍ -->
-              <img src="Imagenes/plano_comercial_2.jpg" alt="Detalle" onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
-               <div class="modal-image-label">Detalle de Locales</div>
+              <img src="Imagenes/cocina.jpeg" alt="Detalle" onerror="this.src='https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'">
+               <div class="modal-image-label">Elevacion de cocina</div>
             </div>
           </div>
         </div>
